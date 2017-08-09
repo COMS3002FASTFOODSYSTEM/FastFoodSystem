@@ -1,0 +1,286 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Structured General Purpose Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+   
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Assignment\ \#1} % Assignment title
+\newcommand{\hmwkDueDate}{Monday,\ January\ 1,\ 2012} % Due date
+\newcommand{\hmwkClass}{BIO\ 101} % Course/class
+\newcommand{\hmwkClassTime}{10:30am} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Daniel Holmes} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{Group 4 : Fast-Food Management System} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{COMS3002 : Software Engineering}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ Monday August 14 2017}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+
+\begin{homeworkProblem}[Overview]
+\vspace{10pt} % Question
+
+\problemAnswer{ % Answer
+We are going to build a system to facilitate making orders and picking up orders either to eat
+in the restaurant or by a drive-in pickup for a Fast-Food chain of restaurants. An order is made through the Internet and specifying the location to be pickup. An order made is issued a number which can be used
+to make payment. An order is honoured and prepared only after payment is made with the
+issued number.
+}
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Objectives and Goals] 
+
+%--------------------------------------------
+
+-Enable users to create an account using their email address to log their activity.
+
+-Payment credentials will be stored with the user account
+
+-Make online payment secure
+
+-Login will be accomplished using username(email) and password.
+
+-We will use Geo-location to isolate near-by Fast-food restuarents.
+
+- Restuarants menu to be displayed in-app 
+
+-Create easy to navigate menus
+
+-A shopping basket implementation to store selected items.
+
+
+-Order reciept to be generated and sent to customer for book-keeping.
+%--------------------------------------------
+
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Responsibilities] % Roman numerals
+
+%--------------------------------------------
+
+\begin{homeworkSection}{Front-End : Garfield Moganedi and Kamogelo Khamiwa} % Using the problem name elsewhere
+
+-HTML,CSS and JavaScript implementation of our user interface
+
+-Aesthetic layout of Website
+
+-Incoporate restuarant menus into display
+
+-Coherent navigation of internet application
+
+-Provide map to diplay Geo-location of selected location. 
+
+\end{homeworkSection}
+
+%--------------------------------------------
+
+\begin{homeworkSection}{Back-End : Nthikeng Letsoalo and Mohale Nakana}
+-Structuring of databases(Restuarants, User Accounts)
+
+-Logical handling of order inputs and delivering relevent output information.
+
+-Use open GIS services to get location information
+
+-Implement secure payment facilities.
+
+
+\end{homeworkSection}
+
+%--------------------------------------------
+
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 4
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Expected Input/Output] % Roman numerals
+\begin{homeworkSection}{Registration}
+-First Name
+
+-Last Name
+
+-Email Address
+
+-Password
+
+\problemAnswer{
+Our output will be confirmation of a registered account
+}
+
+\end{homeworkSection}
+
+\begin{homeworkSection}{Order page}
+-Geo-location
+
+-Preferred location
+
+\problemAnswer{
+Our output is the available options within the selected area
+}
+
+
+\end{homeworkSection}
+
+\begin{homeworkSection}{Placing an Order}
+-Selected restuarant
+
+-Selected items
+
+-Method of collection (Eating-in or Collecting)
+
+\problemAnswer{
+Our output is the customers Order number.
+}
+
+\end{homeworkSection}
+
+
+\begin{homeworkSection}{Payment page}
+-Card number
+
+-CVD number
+
+\problemAnswer{
+Our output is the confirmation of your payment and a receipt is issued with the clients unique reference number. A map showing the directions to the location is then displayed 
+}
+
+\end{homeworkSection}
+
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
