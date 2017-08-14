@@ -1,0 +1,23 @@
+###############################################################################
+#               	VIEWING THE FASTFOODSYSTEM REPOSITORY                     #
+###############################################################################
+
+-------Method 1--------
+
+Open your terminal and make sure you have git initialsed in your working directory
+
+Use the command 'git init' if it is not initialised
+
+Then use the following command to clone the repository:
+
+git clone https://github.com/COMS3002FASTFOODSYSTEM/FastFoodSystem.git
+
+Then use the command: 'cd FastFoodSystem' to cd into the repository to view the contents
+
+------Method 2---------
+
+Or alternatively, one could simply use the web browser, in your web broswer type the following URL:
+
+https://github.com/COMS3002FASTFOODSYSTEM/FastFoodSystem
+
+
