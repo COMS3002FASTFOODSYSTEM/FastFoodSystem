@@ -204,7 +204,27 @@
 
 \begin{homeworkProblem}[External Interface Requirements]
 	\begin{homeworkSection}{User Interfaces} %/ copy this block to create subsections
-	
+	The system may later be adapted to work as a desktop website but currently we are only focusing on the mobile versions, iOS, Android as well as Windows mobile. That being said, the main feel of the app will be a modern crossplatform design so tiles and buttons will be of AngularJS, CSS3 as well as Ionic.
+
+The first page is a Welcome screen then a Home screen. Options that stay available on each screen is an option icon with:
+	\begin{itemize}
+	\item Preferences
+	\item Help
+	\item Feedback
+	\item About
+	\item Logout
+	\end{itemize}
+	The Footer of the App will have 3 fixed buttons (more like Instagram). The buttons shall respecitively be: 
+	\beign{itemize}
+	\item Orders
+	\item Home
+	\item (Idle)
+	\end{homeworkSection}
+	\begin{homeworkSection}{Hardware Interfaces} %/ copy this block to create subsections
+	Since by design the App is crossplaform the constraints here needed to be a bit more flexible, however GPS location as well as mobile identity permissions will be required. The app should run in any Android device of version 6.0 or above, OSX and Windows 10 mobile.
+	\begin{homeworkSection}{Software Interfaces} %/ copy this block to create subsections
+	\end{homeworkSection}
+	The main protocal of communication will be HTTP. So we expect data to shared as JSON arrays or anything better. Libraries like that of JQuery should be considered.
 	\end{homeworkSection}
 
 \end{homeworkProblem}
