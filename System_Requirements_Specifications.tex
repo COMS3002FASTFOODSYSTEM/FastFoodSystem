@@ -222,9 +222,12 @@ The first page is a Welcome screen then a Home screen. Options that stay availab
 	\end{homeworkSection}
 	\begin{homeworkSection}{Hardware Interfaces} %/ copy this block to create subsections
 	Since by design the App is crossplaform the constraints here needed to be a bit more flexible, however GPS location as well as mobile identity permissions will be required. The app should run in any Android device of version 6.0 or above, OSX and Windows 10 mobile.
-	\begin{homeworkSection}{Software Interfaces} %/ copy this block to create subsections
 	\end{homeworkSection}
-	The main protocal of communication will be HTTP. So we expect data to shared as JSON arrays or anything better. Libraries like that of JQuery should be considered.
+	\begin{homeworkSection}{Software Interfaces} %/ copy this block to create subsections
+	An SQL database management system, preferably PostgreSQL shall be used for this three-tier system. The Google Maps API should be used to make it easier for users to visualise their locations as well as locations of the local restuarents. 
+	\end{homeworkSection}
+	\begin{homeworkSection}{Communication Interfaces} %/ copy this block to create subsections
+	The main protocal of communication will be HTTP. So we expect encrypted data to shared as JSON arrays or anything better. Libraries like that of JQuery should be considered when handling form inputs that have been sanitized. Minimize response time at all times so persistant open threads may need to be open on the server-side.
 	\end{homeworkSection}
 
 \end{homeworkProblem}
