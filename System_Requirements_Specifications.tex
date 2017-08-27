@@ -174,27 +174,27 @@
 	\end{homeworkSection}
 
 	\begin{homeworkSection}{User Classes and Characteristics} %/ use this block to create 		subsections
-	From the consumer side, anyone with access to a smart-phone and a working bank account is a potential user of the software. To narrow it down a bit, it will be well suited for the working class, as they have long working hours and they are often stuck in traffic. Thus this software will be perfect for them, i.e they can order whilst they are stuck in traffic, and by the time they get to the food outlet their order will be ready to take home. 
+	From the consumer side, anyone with access to a smartphone and a working bank account is a potential user of the software. To narrow it down a bit, it will be well suited for the working class, as they have long working hours and they are often stuck in traffic. Thus this software will be perfect for them, i.e they can order whilst they are stuck in traffic, and by the time they get to the food outlet their order will be ready to take home. 
 	
 	Looking at the service providers (restaurants and fast food outlets), the system will be used by trained staff members. Training which is to be received upon installation of the software.
 	\end{homeworkSection}
 
 	
 	\begin{homeworkSection}{Operating Environment} %/ use this block to create subsections
-	This software will be designed to run in an internet browser, as a result it will be accessible to most operating systems. It will be developed in conjunction with the Google API to provide most of it's geo-location services. PostgreSQL will be the open source database management system that will be in place to implement all relationships that exist between datasets.
+	This software will be designed to run on the popular smartphones as well internet browser later on, as a result it will be accessible to almost all operating systems. It shall be developed in conjunction with the Google API to provide most of it's geo-location services. PostgreSQL will be the open source database management system that will be in place to implement all relationships that exist between datasets.
 	
 	\end{homeworkSection}
 	
 	\begin{homeworkSection}{Design and Implementation Constraints} %/ use this block to create subsections
-	Ehhh Leaders, can I please be given a hand here!!!!!!!
+	High accuracy GPS is very crucial for the system to work at it's best. Also the app should not use more than 256MB of the RAM and take minimum CPU time as that may hamper smooth operation of the entire smartphone.
 	\end{homeworkSection}
 	
 	
 	\begin{homeworkSection}{User Documentation} %/ use this block to create subsections
 	
 	\begin{itemize}
-	\item Consumers will be given a comprehensive user-manual
-	\item Services providers will also be given their own user-manual which will also double as training manual.
+	\item Consumers will be given a 1-page comprehensive graphical user-manual
+	\item Services providers will also be given their own user-manual which will also double as training manual
 	\end{itemize}
 	\end{homeworkSection}
 
@@ -204,9 +204,9 @@
 
 \begin{homeworkProblem}[External Interface Requirements]
 	\begin{homeworkSection}{User Interfaces} %/ copy this block to create subsections
-	The system may later be adapted to work as a desktop website but currently we are only focusing on the mobile versions, iOS, Android as well as Windows mobile. That being said, the main feel of the app will be a modern crossplatform design so tiles and buttons will be of AngularJS, CSS3 as well as Ionic.
+	The system may later be adapted to work as a desktop website but currently we are only focusing on the mobile versions, iOS, Android as well as Windows mobile. That being said, the main feel of the app will be a modern crossplatform design so tiles and buttons will be of AngularJS, CSS3 as well as Ionic. At any point all errors and technical failures must be handle for by the system and then only notify the user.
 
-	The first page is a Welcome screen then a Home screen. Options that stay available on each screen is an option icon with:
+	The first page is a Welcome screen then a Home screen. Options that stay available on each screen page is an option icon with:
 		\begin{itemize}
 		\item Preferences
 		\item Help
@@ -214,15 +214,15 @@
 		\item About
 		\item Logout
 		\end{itemize}
-	The Footer of the App will have 3 fixed buttons (more like Instagram). The buttons shall respecitively be: 
+	The footer of the app will have 3 fixed buttons (more like Instagram). The buttons shall respecitively be: 
 		\begin{itemize}
-		\item Orders
-		\item Home
-		\item (Idle)
+		\item Orders - To show pending orders and well as approved orders
+		\item Home - To go to the Home screen
+		\item (Idle) - This button on the footer doesn't have a function as of yet, but we'll soon find a function for it
 		\end{itemize}
 	\end{homeworkSection}
 	\begin{homeworkSection}{Hardware Interfaces} %/ copy this block to create subsections
-	Since by design the App is crossplaform the constraints here needed to be a bit more flexible, however GPS location as well as mobile identity permissions will be required. The app should run in any Android device of version 6.0 or above, iOSX and Windows 10 mobile.
+	Since by design the app is crossplatform the constraints here needed to be a bit more flexible, however GPS location as well as mobile identity permissions will be required. The app should run on any Android device of version 6.0 or above, iOSX and Windows 10 mobile.
 	\end{homeworkSection}
 	\begin{homeworkSection}{Software Interfaces} %/ copy this block to create subsections
 	An SQL database management system, preferably PostgreSQL shall be used for this three-tier system. The Google Maps API should be used to make it easier for users to visualise their locations as well as locations of the local restuarents. 
