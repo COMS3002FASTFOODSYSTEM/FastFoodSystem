@@ -143,44 +143,43 @@
 
 \begin{homeworkProblem}[Introduction]
 	\begin{homeworkSection}{Purpose} %/ use this block to create subsections
-	The purpose of this document is to provide a detailed description of the final system(FAST FOOD MANAGEMENT SYSTEM) we intend to implement using SCRUM development life cycle.
+	The purpose of this document is to provide a detailed description of the final Fast Food Management System we intend to implement with SCRUM development life cycle.
 	
 	\end{homeworkSection}
 	\begin{homeworkSection}{Intended Audience and Reading Suggestions}
 	
-	Software development teams, our peers and superiors alike. This document is written in an effort to facilitiate cross-departmental contribution to this project. We open with an overall description to state our intended end product followed by external interface requirements to expand upon our development strategies. System features are included to futher modularize the necessary tasks our project must undertake. Nonfunctional requirements explain our intended performance security goals. 
+	Software development teams, our peers and superiors alike are who this document is addressed to. Now, this document is written in an effort to facilitiate cross-departmental contribution to this project. We open with an overall description to state our intended end product followed by external interface requirements to expand upon our development strategies. System features are included to futher modularize the necessary tasks our project must undertake. Nonfunctional requirements explain our intended performance security goals. 
 	\end{homeworkSection}
 	
 	\begin{homeworkSection}{Product Scope}
 	
-	Fast Food Management brings the people to food and no more queues to Fast food restaurants. Registered Fast-food restaurants will be alliviated of queues by receiving online orders and providing estimate preparation time. On accessing the site or Mobile App our clients customers are able to place an order at their selected establishment. Geo-location information is gathered and fast food restaurants servers registered in our database, will appear in order of proximity from our customers recorded Geo-location. Menu presentation of the selected restaurant is followed by a place order interface the customer will use to select restaurent item’s. Payment credentials will be stored and secured prior to issuing an order number to our customer which must be presented on collection of their order.
+	Fast Food Management System brings the people to food and bye-bye to queues in Fast food restaurants, fast food are suppose to be {\it fast}. Registered fast food restaurants will be alliviated of queues by receiving orders online and providing estimate preparation time. On accessing the site or the mobile app, our clients/customers are able to place orders at their selected establishments. Geo-location information is gathered and fast food restaurants servers registered in our database, will appear in order of proximity from our customers recorded geo-location. Menu presentation of the selected restaurant is followed by a place order interface the customer will use to select restaurent's items. Payment credentials will be secured and stored prior to issuing an order number to our customer which must be presented on collection of their order.
 	\end{homeworkSection}
 	
 	\begin{homeworkSection}{Definitions}
-	\textbf{Three-tier client-server architecture} 
-	:  system Architecture that will define three logically independent tiers, namely Presentation, Data management and Domain logic.
+	\textbf{Three-tier client-server architecture} : System Architecture that will define three logically independent tiers, namely, Presentation, Data management and Domain logic.
 	
 \textbf{Geo-location} : An estimation of real world geographical location.
 
-\textbf{Service providers} : will refer to restaurants and fast food outlets
+\textbf{Service providers} : Refers to restaurants and onther registered fast food outlets
 
 \textbf{PostgreSQL} : An open source Database management system.
 
-\textbf{iOS(X)} : Operating system used in Mobile Apple devices.
+\textbf{iOS(X)} : Operating system used by mobile Apple devices.
 
-\textbf{Android} : Operating system used by Samsung mobile devices.
+\textbf{Android} : Google's Most common open-source operating system used by mobile devices.
 
-\textbf{Windows mobile} : Windows operating system ported for mobile device functionality.
+\textbf{Windows 10 mobile} : Windows operating system ported for mobile device functionality.
 
-\textbf{AngularJS(Ajax)} : A JavaScript framwork that allows a dynamic page refresh without reloading.
+\textbf{AngularJS} : A JavaScript framework that allows a dynamic page refresh.
 
-\textbf{CSS3} : A tool used to format webpage layout.
+\textbf{CSS3} : A framework used to format webpage layout.
 
-\textbf{Ionic} : An HTML5 framework that supports mobile application development.
+\textbf{Ionic} : A modern HTML5, CSS framework that supports mobile application development.
 
 \textbf{JSON} : (JavaScript Object Notation) Is used to transmit data between server and web application.
 
-\textbf{Jquery} : Similar to AngularJS it alows manipulation of a web page to enble user interaction.
+\textbf{JQuery} : JavaScript framework that allows manipulation of a web page to enble user interaction.
 
 	\end{homeworkSection}
 	\begin{homeworkSection}{References}
@@ -198,7 +197,7 @@
 
 \begin{homeworkProblem}[Overall Description]
 	\begin{homeworkSection}{Product perspective} %/ use this block to create subsections
-	The product being represented in this document is a Fast Food Ordering System, a first of it's kind. The software will take the form of a three-tier client-server architecture, with it's primary aim being to give consumers the flexibility of ordering from any restaurant or fast-food outlet. The software will save consumers the time and effort of having to wait in long queues to order their food. The orders are to be made and paid for one online, with the option of choosing to eat at the restaurant or simply to collect your food to eat in the comfort of your own home.
+	The product being represented in this document is really a Fast Food Ordering System, a first of it's kind. The software will take the form of a three-tier client-server architecture, with it's primary aim being to give consumers the flexibility of ordering from any restaurant or fast-food outlet as well as sending meals to friends. The software will save consumers the time and effort of having to wait in long queues to order their food. The orders are to be made and paid for online, with the option of choosing to eat at the restaurant or simply to collect your food to eat in the comfort of your own.
 	
 	% one last paragraph about security.
 	\end{homeworkSection}
@@ -206,11 +205,11 @@
 	\begin{homeworkSection}{Product functions} %/ use this block to create subsections
 		\begin{itemize}
  		 \item Enable the user to log on to the system so that orders can be tracked
-  		\item Make use of geo-location services to give the user recommendations on places to eat based on a 20km radius
-  		\item Have a user friendly menu to avoid confusion when ordering food
-  		\item When an order has been made, give a the user a period of 10 minutes to make changes to the order
+  		\item Make use of geo-location services to give the user recommendations on places to eat within a 20km radius
+  		\item Have a user friendly menu to avoid confusion when making orders
+  		\item When an order has been made, give a the user a period of 2 minutes to make changes to the order
   		\item Make online payment possible via credit/debit card
-  		\item Make online payment secure
+  		\item Make the online payment secure
   		\item Make use of geo-location services to give user directions to the restaurant 
   		\item Keep track of all the orders coming through using  numbers 
   		
@@ -218,19 +217,19 @@
 	\end{homeworkSection}
 
 	\begin{homeworkSection}{User Classes and Characteristics} %/ use this block to create 		subsections
-	From the consumer side, anyone with access to a smartphone and a working bank account is a potential user of the software. To narrow it down a bit, it will be well suited for the working class, as they have long working hours and they are often stuck in traffic. Thus this software will be perfect for them, i.e they can order whilst they are stuck in traffic, and by the time they get to the food outlet their order will be ready to take home. 
+	From the consumer side, anyone with access to a smartphone and a working bank account is a potential user of the software. To narrow it down a bit, it will be well suited for the working class, as they have long working hours and they are often stuck in traffic. Thus this software will be perfect for them, i.e. they can order whilst they are stuck in traffic, and by the time they get to the food outlet their order will be ready to take home. 
 	
-	Looking at the service providers (restaurants and fast food outlets), the system will be used by trained staff members. Training which is to be received upon installation of the software.
+	Looking at the service providers (restaurants and fast food outlets), the system will be used by trained staff members. Quick training is to be received upon installation of the software.
 	\end{homeworkSection}
 
 	
 	\begin{homeworkSection}{Operating Environment} %/ use this block to create subsections
-	This software will be designed to run on the popular smartphones as well internet browser later on, as a result it will be accessible to almost all operating systems. It shall be developed in conjunction with the Google API to provide most of it's geo-location services. PostgreSQL will be the open source database management system that will be in place to implement all relationships that exist between datasets.
+	This software is designed to run on the popular smartphones as well internet browser later on, as a result it will be accessible to almost all operating systems. It shall be developed in conjunction with the Google API to provide most of it's geo-location services. PostgreSQL will be the open source database management system that will be in place to implement all relationships that exist between datasets.
 	
 	\end{homeworkSection}
 	
 	\begin{homeworkSection}{Design and Implementation Constraints} %/ use this block to create subsections
-	High accuracy GPS is very crucial for the system to work at it's best. Also the app should not use more than 256MB of the RAM and take minimum CPU time as that may hamper smooth operation of the entire smartphone.
+	High accuracy GPS is very crucial for the system to work at it's best. Also the app should not use more than 128MB of the RAM and take minimum CPU time as that may hamper smooth operation of the entire smartphone.
 	\end{homeworkSection}
 	
 	
@@ -262,14 +261,14 @@
 		\begin{itemize}
 		\item Orders - To show pending orders and well as approved orders
 		\item Home - To go to the Home screen
-		\item (Idle) - This button on the footer doesn't have a function as of yet, but we'll soon find a function for it
+		\item (Idle) - This button on the footer doesn't have a function as of yet
 		\end{itemize}
 	\end{homeworkSection}
 	\begin{homeworkSection}{Hardware Interfaces} %/ copy this block to create subsections
 	Since by design the app is crossplatform the constraints here needed to be a bit more flexible, however GPS location as well as mobile identity permissions will be required. The app should run on any Android device of version 6.0 or above, iOSX and Windows 10 mobile.
 	\end{homeworkSection}
 	\begin{homeworkSection}{Software Interfaces} %/ copy this block to create subsections
-	An SQL database management system, preferably PostgreSQL shall be used for this three-tier system. The Google Maps API should be used to make it easier for users to visualise their locations as well as locations of the local restuarents. 
+	An SQL database management system, preferably PostgreSQL shall be used for this three-tier system. The Google Maps API should be used to make it easier for users to visualise their locations as well as locations of the local restuarants. 
 	\end{homeworkSection}
 	\begin{homeworkSection}{Communication Interfaces} %/ copy this block to create subsections
 	The main protocal of communication will be HTTP. So we expect encrypted data to shared as JSON arrays or anything better. Libraries like that of JQuery should be considered when handling form inputs that have been sanitized. Minimize response time at all times so persistant open threads may need to be open on the server-side.
@@ -279,71 +278,70 @@
 
 
 \begin{homeworkProblem}[Functional Requirements: System Features]
-	\begin{homeworkSection}{Geo-location} %/ copy this block to create subsections
+	\begin{homeworkSection}{Pages and permissions} %/ copy this block to create subsections
 	\begin{itemize}	
-	\item Reataurant locator
+	\item Restaurant locator
 	\end{itemize}
 
- 	-Identify restuerant name
+ 	- Identify restuarant name
  
- 	-Calculate distance to restaurant
+ 	- Calculate distance to restaurant
 
- 	-Connect to restaurant server
+ 	- Connect to restaurant server
 
- 	-Load admin/customer interface
+ 	- Load admin/customer interface
 
 	\begin{itemize}
 	\item Admin
 	\end{itemize}
 
- 	-Can change the restaurant menu 
+ 	- Can view and change the restaurant menu 
  	
- 	-Order coordination to ensure effiecient meal preparation for shortest waiting times.
+ 	- Order coordination to ensure effiecient meal preparation for shortest waiting times
  	
- 	-Can view user accounts and see accumulated reciepts (To identify trends)
+ 	- Can view user accounts and see accumulated reciepts and log
 
 	\begin{itemize}
 	\item Customer 
 	\end{itemize}
 
+	- Places an order online
 
-- Places an order online/via app. 
+	- Selects preferred restaurant and places order
 
-- Selects preferred restaurant and places order.
+	- Payment credentials are stored and protected
 
-- Payment credentials are stored and protected.
+	- Upon successful placement of order, a unique reference number is given to the customer. The number shall be used to access the customers payment credentials
 
-- On successful placement of order a unique reference number is given to the customer. The number will be used to access the customers payment credentials.
+	- Customer selects preparation method, eat-in/collect. Their order is then verified and at this point the customer may change their order
 
-- Customer selects preparation method, eat-in/collect. Their order is then verified and at this point the customer may change their order.
-
-- Order is verified and stored in archive. Approximate preperation time and map route(address) is displayed.
+	- Order is verified and stored in archive. Approximate preperation time and map route(address) is displayed
 	
 	\begin{itemize}
 	\item Customer locator
 	\end{itemize}
 	
-- Identify customer’s location
+	- Identify customer’s location
 
-- Retrieve proxity information from restaurant server and display restaurant location to customer and route.
+	- Retrieve proxity information from restaurant server and display restaurant location to customer and route.
 
-\end{homeworkSection}
+	\end{homeworkSection}
 
-\begin{homeworkSection}{Logistic management}
+	\begin{homeworkSection}{Logistic management}
 
-\begin{itemize}
-\item User accounts
-\end{itemize}
+	\begin{itemize}
+	\item User accounts
+	\end{itemize}
 
-- Users can register an account that will need their email and password in this way customers can store their receipts with us.
+	- Users can register an account that will need their email and password in this way customers can store their receipts with us
 
-\begin{itemize}
-\item Menu display
-\end{itemize}
+	\begin{itemize}
+	\item Menu display
+	\end{itemize}
 
-- Restaurant menus will be displayed as jpg/jpeg images.
+	- Restaurant menus need to be quite presantable
 
-- 'Place order' interface will comprise of drop box item selections and view of accumulated cost.
+	- The order placing interface will comprise of drop box item selections and view of accumulated cost
 	
 	\begin{itemize}
 	\item Unique reference number
@@ -361,13 +359,13 @@
 	\begin{homeworkSection}{Performance Requirements} %/ use this block to create subsections
 	
 	
-	   \textbf{Search feature} :\begin{itemize}\item  The search feature should be easy for the user to find. 
-                     \item Results from any search should be easy to use.
+	   \textbf{Search feature} :\begin{itemize}\item  The search feature should be easy for the user to find
+              \item Results from any search should be easy to use
                      \end{itemize}
     \textbf{GPS} : 
     \begin{itemize}\item The results displayed in the map view should be user friendly and easy to understand
-           \item Selecting a pin on the map should only take one click.
-           \item Retreving customer's location should'nt take too long.
+           \item Selecting a pin on the map should only take one click
+           \item Retreving customer's location should'nt take too long
            \item Getting the nearest restuarant also shound'nt take too long
            \item Preferable timmings
                 %$->$\textbf{METER}: Measurements obtained from 1000 searches during testing.\\        
@@ -375,36 +373,32 @@
 	            %\\$->$ \textbf{WISH}: No more than 10 second 100$%$ of the time.		
     
    \end{itemize}
-   \textbf{others} : \begin{itemize}\item Dropdown menus should be identified and used easily.
-             \item Submitting an order should take as lil time as possible. 
-             \item Admin(restaurant) should recieve an order as soon as the delay time had elapsed.
-             \item If the system loses the connection to the Internet or to the GPS device or the system gets some 
-              strange input,the user should be informed.
+   \textbf{others} : \begin{itemize}\item Dropdown menus should be identified and used easily
+             \item Submitting an order should take as lil time as possible
+             \item Admin (restaurant) should recieve an order as soon as the delay time had elapsed
+             \item If the system loses the connection to the Internet or to the GPS device or the system gets some strange input, the user should be informed
 	   \end{itemize}
 	\end{homeworkSection}
  \begin{homeworkSection}{Safety and Security Requirements}
 
-   \begin{itemize}\item Communication between the system and server should be secured.Messages for log-in communication should be encrypted so that 
-     other would'nt get any infomation from them.
+   \begin{itemize}\item Communication between the system and server should be secured. Messages for log-in communication should be encrypted so that 
+     other would not get any infomation from them.
 
-   \item Admin Account should be secured,the Resturant owner should'nt be allowed to log in(for a certain period of time) 
-     after three times of failed log-in attempts.And this must be reported to the developers to check if the system is being attacked 
-     or it was just a mistake by the restaurant owner.
+   \item Admin Account should be secured,the Resturant owner should not be allowed to log in (for a certain period of time) after three times of failed log-in attempts. And this must be reported to the developers to check if the system is being attacked or it was just a mistake by the restaurant owner.
 
-    \item Since the system require users to pay before an order is made,Customers' sensetive information should be heavily protected.
+    \item Since the system require users to pay before an order is made, Customers' sensative information should be heavily protected.
     
-    \item Orders should'nt be mixed up,make sure that the order made goes to the correct restaurant,so to avoid this orders may be stored with 
-     respect to restuarants.If a user chooses to sign up,their email adress/cellphone no should be protected.    
+    \item Orders should'nt be mixed up,make sure that the order made goes to the correct restaurant, so to avoid this orders may be stored with 
+     respect to restuarants. If a user chooses to sign up, their email adress/cellphone no should be protected.
    \end{itemize}
  \end{homeworkSection}
  
  \begin{homeworkSection}{Software Quality Attributes}
-    \textbf{ Maintainability }: The code should be written in a way that allows extension of functions or implementation of new function,for upgrading 
-                       to be easy.
+    \textbf{ Maintainability }: The code should be written in a way that allows extension of functions or implementation of new function, for upgrading to be easy.
     
-   \textbf{ Portability and flexibility} : The web should be accessed from any well known browser(google chrome,mozilla etc).
+   \textbf{ Portability and flexibility} : The system should be accessible from any well known browser (e.g. Google Chrome, Mozilla) other than the app.
 
-    \textbf{Availability} : The web should be reachable whenever it is needed,and anyone in SA should be able to access it(so long as they are connected).
+    \textbf{Availability} : The web should be reachable whenever it is needed, and anyone in South Africa should be able to access it (so long as they are connected).
 
     \textbf{Reliability} : Users should get correct results from any search they make.
 
@@ -414,15 +408,15 @@
       
        \textbf{Admin} :\begin{itemize}
        
-  \item      Admin can view orders made by customers.
-  \item   Can change menu of their restaurant.  
-  \item    They can also give feed back.
+  \item      Admin can view orders made by customers
+  \item   Can change menu of their restaurant 
+  \item    They can also give feed back
  \end{itemize}
    \textbf{ Customers} :\begin{itemize}
-     \item  customers can create an account.
-     \item   customers can make an order,they can cancel an order(before the delay time have not elapsed).
-     \item  They can give feedback     
-     \item       They can also specify a restaurant they want to place on order to. 
+     \item Customers can create an account
+     \item Customers can make an order, they can cancel an order (before the delay time have not elapsed)
+     \item They can give feedback     
+     \item They can also specify a restaurant they want to place on order to
     \end{itemize}       
       
  \end{homeworkSection}
