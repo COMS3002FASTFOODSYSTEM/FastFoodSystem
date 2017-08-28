@@ -358,7 +358,74 @@
 
 \begin{homeworkProblem}[Non-functional Requirements]
 		
+	\begin{homeworkSection}{Performance Requirements} %/ use this block to create subsections
 	
+	
+	   \textbf{Search feature} :\begin{itemize}\item  The search feature should be easy for the user to find. 
+                     \item Results from any search should be easy to use.
+                     \end{itemize}
+    \textbf{GPS} : 
+    \begin{itemize}\item The results displayed in the map view should be user friendly and easy to understand
+           \item Selecting a pin on the map should only take one click.
+           \item Retreving customer's location should'nt take too long.
+           \item Getting the nearest restuarant also shound'nt take too long
+           \item Preferable timmings
+                %$->$\textbf{METER}: Measurements obtained from 1000 searches during testing.\\        
+                %$->$ \textbf{MUST}: No more than 15 seconds 100$%$ of the time.
+	            %\\$->$ \textbf{WISH}: No more than 10 second 100$%$ of the time.		
+    
+   \end{itemize}
+   \textbf{others} : \begin{itemize}\item Dropdown menus should be identified and used easily.
+             \item Submitting an order should take as lil time as possible. 
+             \item Admin(restaurant) should recieve an order as soon as the delay time had elapsed.
+             \item If the system loses the connection to the Internet or to the GPS device or the system gets some 
+              strange input,the user should be informed.
+	   \end{itemize}
+	\end{homeworkSection}
+ \begin{homeworkSection}{Safety and Security Requirements}
+
+   \begin{itemize}\item Communication between the system and server should be secured.Messages for log-in communication should be encrypted so that 
+     other would'nt get any infomation from them.
+
+   \item Admin Account should be secured,the Resturant owner should'nt be allowed to log in(for a certain period of time) 
+     after three times of failed log-in attempts.And this must be reported to the developers to check if the system is being attacked 
+     or it was just a mistake by the restaurant owner.
+
+    \item Since the system require users to pay before an order is made,Customers' sensetive information should be heavily protected.
+    
+    \item Orders should'nt be mixed up,make sure that the order made goes to the correct restaurant,so to avoid this orders may be stored with 
+     respect to restuarants.If a user chooses to sign up,their email adress/cellphone no should be protected.    
+   \end{itemize}
+ \end{homeworkSection}
+ 
+ \begin{homeworkSection}{Software Quality Attributes}
+    \textbf{ Maintainability }: The code should be written in a way that allows extension of functions or implementation of new function,for upgrading 
+                       to be easy.
+    
+   \textbf{ Portability and flexibility} : The web should be accessed from any well known browser(google chrome,mozilla etc).
+
+    \textbf{Availability} : The web should be reachable whenever it is needed,and anyone in SA should be able to access it(so long as they are connected).
+
+    \textbf{Reliability} : Users should get correct results from any search they make.
+
+ \end{homeworkSection}
+ 
+ \begin{homeworkSection}{Business Rules} 
+      
+       \textbf{Admin} :\begin{itemize}
+       
+  \item      Admin can view orders made by customers.
+  \item   Can change menu of their restaurant.  
+  \item    They can also give feed back.
+ \end{itemize}
+   \textbf{ Customers} :\begin{itemize}
+     \item  customers can create an account.
+     \item   customers can make an order,they can cancel an order(before the delay time have not elapsed).
+     \item  They can give feedback     
+     \item       They can also specify a restaurant they want to place on order to. 
+    \end{itemize}       
+      
+ \end{homeworkSection}
 	
 \end{homeworkProblem}
 
