@@ -1,0 +1,47 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+    >
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    tools:context="com.example.mypc.fastfoodms.MapsActivity"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_height="400dp" />
+
+    <Button
+        android:text="Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map"
+        android:layout_toEndOf="@+id/edtLocation"
+        android:layout_marginStart="22dp"
+        android:id="@+id/btnSearch"
+        android:onClick="onClick" />
+
+    <Button
+        android:text="Restuarant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:id="@+id/btnRestuarant"
+        android:layout_below="@+id/edtLocation"
+        android:layout_toStartOf="@+id/btnSearch"
+        android:onClick="onClick (MapsActivity)" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtLocation"
+        android:layout_marginStart="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp" />
+</RelativeLayout>

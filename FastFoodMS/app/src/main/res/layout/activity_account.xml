@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/activity_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mypc.fastfoodms.AccountActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cast_intro_overlay_button_background_color"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar2"
+        android:elevation="6dp" />
+
+    <ScrollView
+        tools:layout_editor_absouluteY="8dp"
+        tools:layout_editor_absouluteX="8dp"
+        tools:layout_editor_absoluteY="4dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/scrlView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cast_intro_overlay_button_background_color"
+                android:elevation="7dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/pizza"
+                    android:id="@+id/imgPizza"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <TextView
+                    android:text="Pizza: R 120"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPizza"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <TextView
+                    android:text="Description: Fire baked pizza with sundried tomatoes and sausages. Also has a sweet chilli base and two cheeses: Mozzarella and Chedar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPizzaDescription"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <CheckBox
+                    android:text="Add to list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkPizza"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/hotdog"
+                    android:id="@+id/imgHotDog"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <TextView
+                    android:text="HotDog: R 40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtHotDog"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <TextView
+                android:text="Description: Our famous Man Eater Hot Dog contains three cheeses, premium grade sausage, chilli, freshly produced gerkins and caramalized onions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtHotDogDescription"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+                <CheckBox
+                    android:text="Add to list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkHotDog"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cast_intro_overlay_button_background_color"
+                android:elevation="7dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgBurger"
+                    app:srcCompat="@drawable/burger"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:elevation="7dp" />
+
+                <TextView
+                    android:text="Burger: R 50 "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtBurgerPrice"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <TextView
+                    android:text="Description: Cheese burger with fresh lettuce and tomato. Real meat buger patty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtBurgerDescription"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkBurger"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Add to list"
+                    android:elevation="1dp"
+                    android:layout_gravity="right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgWings"
+                    app:srcCompat="@drawable/hotwings"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:text="Wings: R 50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtWings"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:text="Description: Our famous hot wings dunked into our spicy secret sauce served witha mushroom sauce dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtWingsDescription"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp" />
+
+                <CheckBox
+                    android:text="Add to list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkWings"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="right" />
+
+            </LinearLayout>
+
+            <Button
+                android:text="Check out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCheckOut"
+                android:background="@color/cast_intro_overlay_button_background_color"
+                android:alpha="0.5"
+                android:elevation="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

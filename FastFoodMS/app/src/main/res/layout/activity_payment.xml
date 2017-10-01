@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mypc.fastfoodms.PaymentActivity">
+
+    <ScrollView
+        tools:layout_editor_absouluteY="8dp"
+        tools:layout_editor_absouluteX="8dp"
+        tools:layout_editor_absoluteY="4dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/scrlView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRef"
+        android:textSize="30dp"
+        android:text="Reference No:" />
+
+            <TextView
+        android:text="Total Cost:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:id="@+id/txtTotalCost" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtCardHolder"
+        android:layout_marginTop="50dp"
+        android:hint="Name of Card Holder..." />
+
+            <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtCardNumber"
+        android:hint="Card number..." />
+
+            <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtCVC"
+        android:hint="CVC number..." />
+
+            <TextView
+                android:text="Pick an expirey date for your card:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/txtDatePicker"
+                android:layout_marginTop="20dp" />
+
+            <DatePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker" />
+
+    <Button
+        android:text="Make Payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/btnPay"
+        android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+        android:layout_marginTop="50dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
