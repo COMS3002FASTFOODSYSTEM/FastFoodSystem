@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSkipRegistration;
     private Button btnRestaurant;
     int PLACE_PICKER_REQUEST=1;
-    private String restaurantAddress;
+    public static String restaurantAddress;
+    public static String resName;
+    public static int page;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                page =2;
                 startActivity(new Intent(MainActivity.this,SignUpActivity.class));
             }
         });
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         btnAlreadyRegistered.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                page=1;
                 startActivity(new Intent(MainActivity.this,SignInActivity.class));
                 //startActivity(new Intent(MainActivity.this,OrdersActivity.class));
             }
@@ -91,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         btnSkipRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                page =0;
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
                 Intent intent;
                 try {
@@ -111,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         if(reqCode==PLACE_PICKER_REQUEST){
             if(resCode== RESULT_OK){
                 Place restuarant = PlacePicker.getPlace(data,this);
+                resName = String.format("%s",restuarant.getName());
                 restaurantAddress = String.format("%s",restuarant.getAddress());
             }
         }

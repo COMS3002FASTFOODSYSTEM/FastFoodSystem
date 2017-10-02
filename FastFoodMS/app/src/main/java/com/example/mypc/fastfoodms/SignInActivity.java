@@ -27,7 +27,8 @@ public class SignInActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private String restaurantAddress;
+    public static String restaurantAddress;
+    public static String resName;
     int PLACE_PICKER_REQUEST=1;
 
     @Override
@@ -73,6 +74,7 @@ public class SignInActivity extends AppCompatActivity {
         if(reqCode==PLACE_PICKER_REQUEST){
             if(resCode== RESULT_OK){
                 Place restuarant = PlacePicker.getPlace(data,this);
+                resName = String.format("%s",restuarant.getName());
                 restaurantAddress = String.format("%s",restuarant.getAddress());
             }
         }

@@ -34,7 +34,8 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     int PLACE_PICKER_REQUEST=1;
-    private String restaurantAddress;
+    public static String restaurantAddress;
+    public static String resName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
         if(reqCode==PLACE_PICKER_REQUEST){
             if(resCode== RESULT_OK){
                 Place restuarant = PlacePicker.getPlace(data,this);
+                resName = String.format("%s",restuarant.getName());
                 restaurantAddress = String.format("%s",restuarant.getAddress());
             }
         }

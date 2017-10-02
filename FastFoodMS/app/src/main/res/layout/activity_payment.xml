@@ -72,7 +72,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/datePicker" />
 
-    <Button
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:id="@+id/txtAddress" />
+
+            <Button
         android:text="Make Payment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
