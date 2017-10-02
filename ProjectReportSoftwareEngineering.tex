@@ -1005,11 +1005,21 @@ $*******************************************************************************
                 \begin{itemize}
                     \item public void onRequestPermissionsResult()
                     \item public void onMapReady()
+                    
+                        This method is used by the Map interface to initialize values.
                     \item private String getUrl()
-                    \item public boolean cheakLocationPermission()
-                    \item public void onConnectionSuspended()
+                    
+                        The method is used to get the url from the google servers.
+                    \item public boolean checkLocationPermission()
+                    
+                        Method is for check the if the user has given the app permission to  use the onboard location serivces.
+                    
                     \item public void onConnectionFailed()
+                    
+                        If the connection fails it produces and error message
                     \item public void onLocationChanged()
+                    
+                        The method detects the movement of the  user  via the location services and then it update the map marker
                 \end{itemize}
         \item \textbf{PaymentActivity:}
                 \begin{itemize}
@@ -1018,23 +1028,31 @@ $*******************************************************************************
         \item \textbf{SignInActivity:}
                 \begin{itemize}
                     \item public void onAuthStateChanged()
+                    
                     	Checking whether the  user as previously sign in, if he is still signed in it opens the Google place picker to let the user start selecting the restaurant of his choice;
                     \item protected void onActivityResult()
+                    
                     	Method is called when the google place picker returns after the user has selected the restaurant of his choice, we use this to get the name and address of the place.
                     \item protected void onStart()
+                    
                     	An android method the is called when the Activity has started up, inside this method we put the event listener for the firebase Authentication services.
                     \item private void startSignIn()
+                    
                     	Method that enables the user to log in to the app.
                     \item public void onComplete()
+                    
                     	Method to check if the user has successfully signed into the application.
                 \end{itemize}
         \item \textbf{SignUpActivity:}
                 \begin{itemize}
                     \item private void startSignUp()
+                    
                     	Method which signs up new users to the application 
                     \item public void onComplete()
+                    
                     	Method used to check if the sign up process was sucessfull or not.
                     \item protected void onActivityResult()
+                    
                     	Method is called when the google place picker returns after the user has selected the restaurant of his choice, we use this to get the name and address of the place.
                     
                     	
