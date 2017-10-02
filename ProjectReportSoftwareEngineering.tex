@@ -22,6 +22,15 @@
 \documentclass{article}
 \usepackage{forest}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage{tikz}
+
+\sloppy
+\hyphenpenalty 10000000
+
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
@@ -99,13 +108,14 @@
 %	NAME AND CLASS SECTION
 %----------------------------------------------------------------------------------------
 
-\newcommand{\hmwkTitle}{Final Report} % Assignment title
+\newcommand{\hmwkTitle}{Fast-Food Management System Final Report} % Assignment title
 \newcommand{\hmwkDueDate}{Monday,\ October\ 02\ 2017} % Due date
-\newcommand{\hmwkClass}{Sofware Engineering} % Course/class
+\newcommand{\hmwkClass}{Software Engineering} % Course/class
 \newcommand{\hmwkClassTime}{COMS3002} % Class/lecture time
-\newcommand{\hmwkClassInstructor}{Daniel} % Teacher/lecturer
+\newcommand{\hmwkClassInstructor}{Daniel Holmes} % Teacher/lecturer
 \newcommand{\hmwkAuthorName}{Group 4} % Your name
-
+\newcommand{\hmwGroupMembers}{Front-end: Kamogelo Khamiwa(674815) & Chuba Moganedi(716705)}
+\newcommand{\hmkGroupMembers}{Back-end: Nthikeng Letsoalo(1037720) & Mohale Nakana(1174093)}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -114,11 +124,14 @@
 \vspace{2in}
 \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
 \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
-\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}\\
 \vspace{3in}
+\vspace{0.1in}\large{{\hmwGroupMembers}}\\
+\vspace{0.1in}\large{{\hmkGroupMembers}}
 }
 
 \author{\textbf{\hmwkAuthorName}}
+
 \date{} % Insert date here if you want it to appear below your name
 
 %----------------------------------------------------------------------------------------
@@ -153,7 +166,7 @@
 \begin{homeworkProblem}[Introduction]
 	\begin{homeworkSection} { - Problem Statement} 
 	
-The ordering protocol used by fast food restuarants should aim on getting the meals of a customer being prepared within a prefered time,restaurants should avoid long queues on their tills so that the customers won't have to waste their time queueing to make orders.
+The ordering protocol used by fast food restaurants should aim on getting the meals of a customer being prepared within a preferred time,restaurants should avoid long queues on their tills so that the customers won't have to waste their time queuing to make orders.
 
 Unfortunately the current ordering system used is not efficient and we see the restaurants loosing customers(because no one want to join a long queue on an empty stomach).The system also course financial burdens on the restaurants since they have hire extra stuff in order to try serve the long queues fast.
 
@@ -161,7 +174,7 @@ Restaurants can use the Fast Food Management system implemented by Group 4 to ov
 		
 	\end{homeworkSection}	
      
-     \begin{homeworkSection} { - OverView of the project} 
+     \begin{homeworkSection} { - Overview of the project} 
       
 We are going to build a web application to facilitate making orders at selected Fast-Food restaurants.
 Our application will allow users to sign-up an account, select a restaurant within a certain radius of their
@@ -177,7 +190,7 @@ protected so that no fraudulent activities may occur.
         \begin{itemize}
  		 
  		 \item Enable users to create an account using their email address to log their activity.
-\item Login page for restauants customers and admins
+\item Login page for restaurants customers and admins
 \item Store payment credentials together with the user account
 
 \item Make online payment secure
@@ -192,7 +205,7 @@ protected so that no fraudulent activities may occur.
 
 \item A shopping basket implementation to store selected items.
 
-\item Order reciept to be generated and sent to customer for book-keeping.
+\item Order receipt to be generated and sent to customer for book-keeping.
   		
 		\end{itemize}    
        
@@ -257,8 +270,6 @@ protected so that no fraudulent activities may occur.
 
 
 $*************************************************************************************$
-\\
-\\
 
 \cleardoublepage
 
@@ -271,7 +282,7 @@ $*******************************************************************************
 	\end{homeworkSection}
 	\begin{homeworkSection}{Intended Audience and Reading Suggestions}
 	
-	Software development teams, our peers and superiors alike are who this document is addressed to. Now, this document is written in an effort to facilitiate cross-departmental contribution to this project. We open with an overall description to state our intended end product followed by external interface requirements to expand upon our development strategies. System features are included to futher modularize the necessary tasks our project must undertake. Nonfunctional requirements explain our intended performance security goals. 
+	Software development teams, our peers and superiors alike are who this document is addressed to. Now, this document is written in an effort to facilitate cross-departmental contribution to this project. We open with an overall description to state our intended end product followed by external interface requirements to expand upon our development strategies. System features are included to further modularize the necessary tasks our project must undertake. Nonfunctional requirements explain our intended performance security goals. 
 	\end{homeworkSection}
 	
 	\begin{homeworkSection}{Product Scope}
@@ -293,7 +304,7 @@ $*******************************************************************************
 	
 \textbf{Geo-location} : An estimation of real world geographical location.
 
-\textbf{Service providers} : Refers to restaurants and onther registered fast food outlets
+\textbf{Service providers} : Refers to restaurants and other registered fast food outlets
 
 \textbf{PostgreSQL} : An open source Database management system.
 
@@ -403,7 +414,7 @@ $*******************************************************************************
 	\item Restaurant locator
 	\end{itemize}
 
- 	- Identify restuarant name
+ 	- Identify restaurant name
  
  	- Calculate distance to restaurant
 
@@ -417,9 +428,9 @@ $*******************************************************************************
 
  	- Can view and change the restaurant menu 
  	
- 	- Order coordination to ensure effiecient meal preparation for shortest waiting times
+ 	- Order coordination to ensure efficient meal preparation for shortest waiting times
  	
- 	- Can view user accounts and see accumulated reciepts and log
+ 	- Can view user accounts and see accumulated receipts and log
 
 	\begin{itemize}
 	\item Customer 
@@ -435,7 +446,7 @@ $*******************************************************************************
 
 	- Customer selects preparation method, eat-in/collect. Their order is then verified and at this point the customer may change their order
 
-	- Order is verified and stored in archive. Approximate preperation time and map route(address) is displayed
+	- Order is verified and stored in archive. Approximate preparation time and map route(address) is displayed
 	
 	\begin{itemize}
 	\item Customer locator
@@ -443,7 +454,7 @@ $*******************************************************************************
 	
 	- Identify customer’s location
 
-	- Retrieve proxity information from restaurant server and display restaurant location to customer and route.
+	- Retrieve proximity information from restaurant server and display restaurant location to customer and route.
 
 	\end{homeworkSection}
 
@@ -485,8 +496,8 @@ $*******************************************************************************
     \textbf{GPS} : 
     \begin{itemize}\item The results displayed in the map view should be user friendly and easy to understand
            \item Selecting a pin on the map should only take one click
-           \item Retreving customer's location should'nt take too long
-           \item Getting the nearest restuarant also shound'nt take too long
+           \item Retrieving customer's location shouldn't take too long
+           \item Getting the nearest restaurant also shouldn't take too long
            \item Preferable timmings
                 %$->$\textbf{METER}: Measurements obtained from 1000 searches during testing.\\        
                 %$->$ \textbf{MUST}: No more than 15 seconds 100$%$ of the time.
@@ -494,22 +505,22 @@ $*******************************************************************************
     
    \end{itemize}
    \textbf{others} : \begin{itemize}\item Dropdown menus should be identified and used easily
-             \item Submitting an order should take as lil time as possible
-             \item Admin (restaurant) should recieve an order as soon as the delay time had elapsed
+             \item Submitting an order should take as little time as possible
+             \item Admin (restaurant) should receive an order as soon as the delay time had elapsed
              \item If the system loses the connection to the Internet or to the GPS device or the system gets some strange input, the user should be informed
 	   \end{itemize}
 	\end{homeworkSection}
  \begin{homeworkSection}{Safety and Security Requirements}
 
    \begin{itemize}\item Communication between the system and server should be secured. Messages for log-in communication should be encrypted so that 
-     other would not get any infomation from them.
+     other would not get any information from them.
 
-   \item Admin Account should be secured,the Resturant owner should not be allowed to log in (for a certain period of time) after three times of failed log-in attempts. And this must be reported to the developers to check if the system is being attacked or it was just a mistake by the restaurant owner.
+   \item Admin Account should be secured,the Restaurant owner should not be allowed to log in (for a certain period of time) after three times of failed log-in attempts. And this must be reported to the developers to check if the system is being attacked or it was just a mistake by the restaurant owner.
 
-    \item Since the system require users to pay before an order is made, Customers' sensative information should be heavily protected.
+    \item Since the system require users to pay before an order is made, Customers' sensitive information should be heavily protected.
     
-    \item Orders should'nt be mixed up,make sure that the order made goes to the correct restaurant, so to avoid this orders may be stored with 
-     respect to restuarants. If a user chooses to sign up, their email adress/cellphone no should be protected.
+    \item Orders shouldn't be mixed up,make sure that the order made goes to the correct restaurant, so to avoid this orders may be stored with 
+     respect to restaurants. If a user chooses to sign up, their email address/cellphone no should be protected.
    \end{itemize}
  \end{homeworkSection}
  
@@ -560,12 +571,11 @@ $*******************************************************************************
       \item An option to order without logging in 
       \item Location finder for restaurants within a radius of 20km
       \item Display the menu for the selected restaurants
-      \item Cheackbox menu for selecting meals
+      \item Checkbox menu for selecting meals
       \item Page for making payments
       \item Indication of the distance between the customer and the restaurants
       \item An option to search for a restaurant
-      \\
-      \\
+     
     \end{enumerate}    
    \end{homeworkProblem}
    
@@ -637,7 +647,7 @@ $*******************************************************************************
         \item Status : Sprint 1 planning was complete
         \item Challenges : we had no challenges
         \item Solution   : we move to the next task since we faced no challenges.
-        \item To-do : Login page for restuarants' customers and admins
+        \item To-do : Login page for restaurants' customers and admins
       
       \end{itemize}
       
@@ -675,7 +685,7 @@ $*******************************************************************************
       \begin{itemize}  
       
         \item  Status : Still busy with location finder.
-        \item Challenges : Does'nt show restaurants only.
+        \item Challenges : Doesn't show restaurants only.
         \item Solution   : Look for third parties to help in displaying restaurants only.
         \item To-do : Look for third parties to help in displaying restaurants only.
       
@@ -685,7 +695,7 @@ $*******************************************************************************
       \begin{itemize}  
       
         \item  Status : Location finder On-hold.
-        \item Challenges : Still does'nt show restaurants only.
+        \item Challenges : Still doesn't show restaurants only.
         \item Solution   : We put it on hold and we will continue with it later.
         \item To-do : Display the menu for the selected restaurant to the customer.
       
@@ -695,7 +705,7 @@ $*******************************************************************************
       \begin{itemize}  
       
         \item  Status : Done with displaying the menu.
-        \item Challenges : Does'nt display a specific menu for a specific restaurant.
+        \item Challenges : Doesn't display a specific menu for a specific restaurant.
         \item Solution   : We use a one menu for all restaurants(a general menu).
         \item To-do : Option for selecting meals.
       
@@ -717,7 +727,7 @@ $*******************************************************************************
       \begin{itemize}  
       
         \item  Status : Done with the payments page(Used checkbox).
-        \item Challenges : Could'nt use real accounts.
+        \item Challenges : Couldn't use real accounts.
         \item Solution   : we used a fake one.
         \item To-do : Attend the final meeting.  
       \end{itemize} 
@@ -866,7 +876,7 @@ $*******************************************************************************
 	        transmitted to our server.
 	        \item OUTPUT:
 	        
-	        Based on this informationa relevant map of the customer's location is displayed.
+	        Based on this information a relevant map of the customer's location is displayed.
 	    \end{itemize}
 	    
 	 \item\textbf{GetNearbyPlaceData}:
@@ -930,7 +940,6 @@ $*******************************************************************************
 \end{homeworkProblem}
 
 
-
 %----------------------------------------------------------------------------------------
 
 \end{homeworkProblem} %//END OF PART I
@@ -939,6 +948,89 @@ $*******************************************************************************
 
 \begin{homeworkProblem}[ PART II : Back-end Document ]
 
+    \textbf{Implementation modules}
+    
+    \begin{itemize}
+        \item \textbf{AccountActivity:}
+            \begin{itemize}
+                \item public void placeOrder()
+                
+                This module takes in user input and delivers the information to the back-end.
+                
+                \item public boolean onCreatOptionsMenu()
+                
+                It creates an interactive toolbar with menu items
+                
+                \item public boolean onOptionsItemSelected()
+                
+                It is implemented as an event listener to enable logout functionality on the toolbar.
+                
+                \item private void logout()
+                
+                When called it ends a users active session.
+            \end{itemize}
+        \item \textbf{Dataparser:}
+                \begin{itemize}
+                    \item private HashMap<String,String>getPlace()
+                    \item private List<String,String>getPlaces()
+                    \item public List<HashMap<String,String>>Parse()
+                \end{itemize}
+        \item \textbf{DownloadUrl:}
+                \begin{itemize}
+                    \item public String readUrl()
+                    
+                    Reads the incoming URL.
+                \end{itemize}
+        \item \textbf{GetNearByPlacesData:}
+                \begin{itemize}
+                    \item protected String doInBackgroud()
+                    \item protected void onPostExecute()
+                    \item private void showNearByPlaces()
+                \end{itemize}
+        \item \textbf{MainActivity:}
+                \begin{itemize}
+                    \item public void onAuthStateChanged()
+                    
+                    This module performs a check to determine whether a user is already logged in to the database.
+                    
+                    \item protected void onActivityResult()
+                    
+                    It returns the address that the customer has selected from the  map.
+                    
+                    \item protected void onStart()
+                    
+                    This method adds an event listener for the Auth state*
+                    
+                \end{itemize}
+        \item \textbf{MapActivity:}
+                \begin{itemize}
+                    \item public void onRequestPermissionsResult()
+                    \item public void onMapReady()
+                    \item private String getUrl()
+                    \item public boolean cheakLocationPermission()
+                    \item public void onConnectionSuspended()
+                    \item public void onConnectionFailed()
+                    \item public void onLocationChanged()
+                \end{itemize}
+        \item \textbf{PaymentActivity:}
+                \begin{itemize}
+                    \item public void onClick()
+                \end{itemize}
+        \item \textbf{SignInActivity:}
+                \begin{itemize}
+                    \item public void onAuthStateChanged()
+                    \item protected void onActivityResult()
+                    \item protected void onStart()
+                    \item private void startSignIn()
+                    \item public void onComplete()
+                \end{itemize}
+        \item \textbf{SignUpActivity:}
+                \begin{itemize}
+                    \item private void startSignUp()
+                    \item public void inComplete()
+                    \item protected void onActivityReturn()
+                \end{itemize}
+    \end{itemize}
 
 
 \end{homeworkProblem}
