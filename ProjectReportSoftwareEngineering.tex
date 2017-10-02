@@ -137,7 +137,6 @@
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-
 \maketitle
 
 %----------------------------------------------------------------------------------------
@@ -386,7 +385,7 @@ $*******************************************************************************
 
 \begin{homeworkProblem}[External Interface Requirements]
 		\begin{homeworkSection}{Customer Interfaces} %/ copy this block to create subsections
-	Currently we are only focusing on the mobile versions, Android mobile in particular. That being said, the main feel of the app will be a modern design so tiles and buttons will be constructed using XML & HTML5.
+	Currently we are only focusing on the mobile versions, Android mobile in particular. That being said, the main feel of the app will be a modern design so tiles and buttons will be constructed using XML.
 	
 	The first page is a Home screen. The footer of the app will have 3 fixed buttons: 
 		\begin{itemize}
@@ -396,7 +395,7 @@ $*******************************************************************************
 		\end{itemize}
 	\end{homeworkSection}
 	\begin{homeworkSection}{Hardware Interfaces} %/ copy this block to create subsections
-	The app should run on any Android device running API 26 or later.
+	The app should run on any Android device running API 21 or later.
 	\end{homeworkSection}
 	\begin{homeworkSection}{Software Interfaces} %/ copy this block to create subsections
 		A noSQL database management system,Firebase shall be used for this three-tier system. The Google Maps API should be used for users to visualize their locations as well as locations of the local restaurants.
@@ -411,7 +410,7 @@ $*******************************************************************************
 \begin{homeworkProblem}[Functional Requirements: System Features]
 	\begin{homeworkSection}{Pages and permissions} %/ copy this block to create subsections
 	\begin{itemize}	
-	\item Restaurant locator
+	\item Restaurant locater
 	\end{itemize}
 
  	- Identify restaurant name
@@ -452,7 +451,7 @@ $*******************************************************************************
 	\item Customer locator
 	\end{itemize}
 	
-	- Identify customer’s location
+	- Identify customer's location
 
 	- Retrieve proximity information from restaurant server and display restaurant location to customer and route.
 
@@ -1019,16 +1018,26 @@ $*******************************************************************************
         \item \textbf{SignInActivity:}
                 \begin{itemize}
                     \item public void onAuthStateChanged()
+                    	Checking whether the  user as previously sign in, if he is still signed in it opens the Google place picker to let the user start selecting the restaurant of his choice;
                     \item protected void onActivityResult()
+                    	Method is called when the google place picker returns after the user has selected the restaurant of his choice, we use this to get the name and address of the place.
                     \item protected void onStart()
+                    	An android method the is called when the Activity has started up, inside this method we put the event listener for the firebase Authentication services.
                     \item private void startSignIn()
+                    	Method that enables the user to log in to the app.
                     \item public void onComplete()
+                    	Method to check if the user has successfully signed into the application.
                 \end{itemize}
         \item \textbf{SignUpActivity:}
                 \begin{itemize}
                     \item private void startSignUp()
-                    \item public void inComplete()
-                    \item protected void onActivityReturn()
+                    	Method which signs up new users to the application 
+                    \item public void onComplete()
+                    	Method used to check if the sign up process was sucessfull or not.
+                    \item protected void onActivityResult()
+                    	Method is called when the google place picker returns after the user has selected the restaurant of his choice, we use this to get the name and address of the place.
+                    
+                    	
                 \end{itemize}
     \end{itemize}
 
