@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
         btnAlreadyRegistered.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(MainActivity.this,SignInActivity.class));
-                startActivity(new Intent(MainActivity.this,OrdersActivity.class));
+                startActivity(new Intent(MainActivity.this,SignInActivity.class));
+                //startActivity(new Intent(MainActivity.this,OrdersActivity.class));
             }
         });
 

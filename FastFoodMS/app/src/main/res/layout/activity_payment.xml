@@ -23,14 +23,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtRef"
-        android:textSize="30dp"
+        android:textSize="15dp"
+        android:layout_gravity="center"
         android:text="Reference No:" />
 
             <TextView
         android:text="Total Cost:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
+        android:textSize="15dp"
         android:id="@+id/txtTotalCost" />
 
     <EditText

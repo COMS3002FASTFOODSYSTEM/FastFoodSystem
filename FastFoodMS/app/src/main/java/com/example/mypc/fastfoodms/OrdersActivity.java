@@ -51,7 +51,7 @@ public class OrdersActivity extends AppCompatActivity {
         /*mDatabase.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String value = dataSnapshot.getKey();
+
                 Orders.add(value);
                 Toast.makeText(OrdersActivity.this,value,Toast.LENGTH_LONG).show();
                 arrayAdapter.notifyDataSetChanged();

@@ -17,8 +17,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.wallet.PaymentInstrumentType;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,8 +35,8 @@ public class AccountActivity extends AppCompatActivity {
     private CheckBox chkHotWings;
     private CheckBox chkHotDog;
     private Button btnCheckOut;
-    public double Total=0.0;
-
+    public static double Total=0.0;
+    public static String refNo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +58,34 @@ public class AccountActivity extends AppCompatActivity {
         });
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(mToolbar);
+        mDatabase.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                 refNo = dataSnapshot.getKey();
+                //Toast.makeText(AccountActivity.this,value,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     public void placeOrder() {
@@ -102,7 +134,7 @@ public class AccountActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(AccountActivity.this,"Your order has been placed...",Toast.LENGTH_LONG).show();
-                    //startActivity(new Intent(AccountActivity.this, PaymentActivity.class));
+                    startActivity(new Intent(AccountActivity.this, PaymentActivity.class));
                 }else{
                     Toast.makeText(AccountActivity.this,"Error...",Toast.LENGTH_LONG).show();
 
@@ -121,7 +153,7 @@ public class AccountActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.action_logout){
             logout();
-            //startActivity(new Intent(MainActivity.this,SignInActivity.class));
+            startActivity(new Intent(AccountActivity.this,MainActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
