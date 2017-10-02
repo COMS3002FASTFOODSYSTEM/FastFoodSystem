@@ -4,6 +4,10 @@ Building a web application to facilitate making orders at selected Fast-Food res
 
 Running the application:
 1)Download/Clone FastFoodMS folder.
+
 2)Import and run project in Android studio.
-3)When Signing up password must be atleast 6 digits.
+
+3)When Signing up password must be atleast 6 characters long.
+
+4) To sign in using default user use, email: nthiki@gmail.com password: 123456
 4)Restaurant search is done through the search bar.
